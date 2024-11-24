@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WanderSync - Travel Management System</title>
+    <style>
+        :root {
+            --primary-color: #6F6E6E;
+            --accent-color: #000000;
+            --bg-color: #FFFFFF;
+            --text-color: #333333;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+        }
+
+        nav {
+            background-color: var(--bg-color);
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            z-index: 100;
+        }
+
+        nav ul {
+            max-width: 1200px;
+            margin: 0 auto;
+            list-style: none;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        nav a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 80px auto 0;
+            padding: 20px;
+        }
+
+        section {
+            margin-bottom: 60px;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        h1 {
+            font-size: 50px;
+            color: var(--accent-color);
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            font-size: 36px;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+        .screenshot-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .screenshot-placeholder {
+            background: #f5f5f5;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            min-height: 200px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .screenshot-placeholder img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 15px;
+        }
+
+        .screenshot-placeholder p {
+            margin-top: 10px;
+            font-size: 14px;
+            color: var(--text-color);
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            margin: 20px 0;
+        }
+
+        .video-placeholder {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #f5f5f5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .contributor-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .contributor-card {
+            padding: 20px;
+            background: #f5f5f5;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            nav li {
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#introduction">Introduction</a></li>
+            <li><a href="#design">Design & Architecture</a></li>
+            <li><a href="#ui">User Interface</a></li>
+            <li><a href="#functionality">Functionality</a></li>
+            <li><a href="#conclusions">Conclusions</a></li>
+            <li><a href="#contributors">Contributors</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1>WanderSync</h1>
+        
+        <section id="introduction">
+            <h2>Introduction</h2>
+            <p>WanderSync is an app simplifies the process of creating
+                and managing travel itineraries for solo and group travel. Through this
+                project, users can contribute to and refine travel plans in real-time. The
+                Travel Management app allows users to organize locations, transportation
+                options, accommodations, dining reservations, and personal notes</p>
+        </section>
+
+        <section id="design">
+            <h2>Design & Architecture</h2>
+            <p>Sequence Diagram</p>
+            <div class="screenshot-placeholder">
+                <img src="assets/sequence_diagram.png" alt="WanderSync Sequence Diagram">
+            </div>
+            <p>Design Class Diagram</p>
+            <div class="screenshot-placeholder">
+                <img src="assets/design_class_diagram.jpg" alt="WanderSync Class Diagram">
+            </div>
+        </section>
+
+        <section id="ui">
+            <h2>User Interface</h2>
+            <div class="screenshot-grid">
+                <div class="screenshot-placeholder">
+                    <img src="assets/screens/login.png" alt="Login Screen">
+                    <p>Secure authentication system with email and social login options</p>
+                </div>
+                <div class="screenshot-placeholder">
+                    <img src="assets/screens/logistics.png" alt="Logistics Screen">
+                    <p>The Logistics Screen is the central hub of WanderSync, designed to provide users with an organized overview of their trip planning progress. 
+                        Upon logging in, users are welcomed to this screen, which acts as the landing page. It offers intuitive navigation buttons to access key features such as destinations, dining, accommodations, and more. 
+                        Additionally, a data visualization feature allows users to view interactive charts that compare planned versus allotted trip days, creating an engaging and informative way to track planning progress. 
+                        Collaboration is also a core aspect of the Logistics Screen, with options to invite others to contribute to the trip. 
+                        Users can view a list of collaborators, add shared notes, and access a unified planning experience with real-time updates.</p>
+                </div>
+                <div class="screenshot-placeholder">
+                    <img src="assets/screens/dining.png" alt="Dining Screen">
+                    <p>The Dining Establishments Screen focuses on helping users plan and manage their dining reservations. It features a user-friendly reservation form for entering details such as the restaurant’s location, website, reviews, and reservation times. Once inputted, this information is stored in the Dining database for easy retrieval. The screen organizes entries by date and time, grouping them effectively for better usability.</p>
+                </div>
+                <div class="screenshot-placeholder">
+                    <img src="assets/screens/community.png" alt="Travel Community">
+                    <p>The Travel Community Screen fosters collaboration and inspiration by connecting users with a broader network of travelers. It displays a list of travel posts submitted by users, each containing detailed itineraries linked to the destination database. Additionally, users can include personal reflections, tips, and suggestions in their posts, creating a rich resource for others planning similar trips</p>
+                </div>
+                <div class="screenshot-placeholder">
+                    <img src="assets/screens/accomodations.png" alt="Accommodations">
+                    <p>The Accommodation Screen allows users to organize their lodging details with ease. Users can input and view information such as hotel locations, check-in and check-out times, the number of rooms, and room types. This data is stored in the Accommodations database, enabling efficient retrieval and management. The interface automatically sorts reservations by date and time, clearly distinguishing past reservations from upcoming ones.</p>
+                </div>
+                <div class="screenshot-placeholder">
+                    <img src="assets/screens/destination.png" alt="Destinations">
+                    <p>The Destination Screen is tailored to help users log and manage their travel locations effectively. It provides a seamless interface for recording destination details, including location names and estimated travel dates, through an intuitive form entry system. All destination data is securely stored in Firebase, ensuring easy synchronization across the app's various features. Users can view a consolidated list of their planned destinations, complete with travel dates and durations, offering a clear picture of their itinerary.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="functionality">
+            <h2>Functionality Demo</h2>
+            <div class="video-container">
+                <div class="video-placeholder">
+                    <video controls width="100%">
+                        <source src="assets/demo.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+        </section>
+
+        <section id="conclusions">
+            <h2>Conclusions and Reflections</h2>
+            <p>To most of our team, this project was a great learning experience. 
+                We learned how to work with a team to build a full-stack application from the ground up. 
+                We learned how to manage a project with a team and how to manage our time and resources to meet deadlines.
+                For the most of us this was the first time building a full-stack application and we really learned how the AGILE process can streamline development, 
+                test features and help resolve issues</p>
+        </section>
+
+        <section id="contributors">
+            <h2>Contributors</h2>
+            <div class="contributor-grid">
+                <div class="contributor-card">
+                    <h3>Tyler Chevalier</h3>
+                </div>
+                <div class="contributor-card">
+                    <h3>Nguyen Nguyen</h3>
+                </div>
+                <div class="contributor-card">
+                    <h3>Isabel Rodriguez</h3>
+                </div>
+                <div class="contributor-card">
+                    <h3>Ryan Punamiya</h3>
+                </div>
+                <div class="contributor-card">
+                    <h3>Akhil Palli</h3>
+                </div>
+                <!-- Add more contributor cards as needed -->
+            </div>
+        </section>
+    </div>
+</body>
+</html>
